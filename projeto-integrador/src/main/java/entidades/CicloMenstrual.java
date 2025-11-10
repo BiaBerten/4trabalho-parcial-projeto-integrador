@@ -1,6 +1,7 @@
 package entidades;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +20,11 @@ public class CicloMenstrual {
 
     @ManyToOne
     public Usuario usuario;
+
+    public static List<CicloMenstrual> listAll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'listAll'");
+    }
 
 
 }
