@@ -1,8 +1,8 @@
 package entidades;
 
 import java.time.LocalDate;
-import java.util.List;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class CicloMenstrual {
+public class CicloMenstrual extends PanacheEntityBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer codigo;
@@ -20,11 +20,6 @@ public class CicloMenstrual {
 
     @ManyToOne
     public Usuario usuario;
-
-    public static List<CicloMenstrual> listAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listAll'");
-    }
 
 
 }
